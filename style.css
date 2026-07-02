@@ -272,43 +272,51 @@ body {
 
 /* Title overlay badge for custom title */
 .book-title-overlay {
-  background: rgba(10, 5, 18, 0.85);
-  border: var(--gold-border);
-  box-shadow: var(--gold-shadow);
-  padding: 10px;
-  border-radius: 4px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
   text-align: center;
   z-index: 10;
   pointer-events: none;
+  margin-top: 15px;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.95)) drop-shadow(0 0 10px rgba(0,0,0,0.8));
 }
 
 .book-title-overlay h1 {
   font-family: var(--font-title);
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   background: var(--gold-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin-bottom: -5px;
+  letter-spacing: 1px;
 }
 
 .book-title-overlay p {
   font-family: var(--font-cursive);
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   color: var(--primary-glow);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.9);
+  line-height: 0.8;
+  margin: 5px 0;
 }
 
 .book-author-overlay {
-  background: rgba(10, 5, 18, 0.85);
-  border: 1px solid var(--gold-primary);
-  padding: 5px;
-  font-family: var(--font-serif);
-  font-size: 0.8rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  font-weight: 700;
   color: var(--gold-primary);
   text-transform: uppercase;
-  border-radius: 4px;
   align-self: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: none;
+  letter-spacing: 2px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.95));
+  margin-bottom: 15px;
 }
 
 .book-pages {
