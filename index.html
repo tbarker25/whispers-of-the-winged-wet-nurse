@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official website for 'Whispers of the Winged Wet-Nurse', the most anticipated over-the-top romantic fantasy novel of the decade. Pre-order now for exclusive celestial merch!">
+  <title>Whispers of the Winged Wet-Nurse | Official Romantasy Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sparkle Particle Trail -->
+  <div id="sparkle-container"></div>
+
+  <!-- Feather Rain Background -->
+  <div id="feather-container"></div>
+
+  <!-- Floating Audio Player Widget -->
+  <div class="audio-player-widget">
+    <button class="player-btn" id="music-toggle-btn">▶️</button>
+    <div class="player-info">
+      <span class="player-title">Hymn of the Veil</span>
+      <span class="player-song" id="player-song-title">Whispers of Nectar</span>
+    </div>
+    <div class="visualizer">
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-subtitle">The Prophecy of Nectar and Shadow</span>
+      <h1 class="hero-title">Whispers of the Winged Wet-Nurse</h1>
+      <p class="hero-tagline">She feeds the light. He rules the dark. Together, their forbidden passion will consume the stars.</p>
+      
+      <div class="book-display">
+        <!-- 3D Book Display -->
+        <div class="book-cover-container">
+          <div class="book-cover-3d">
+            <div class="book-spine"></div>
+            <div class="book-front">
+              <!-- Custom Title Overlay to cover original text -->
+              <div class="book-title-overlay">
+                <h1>Whispers</h1>
+                <p>of the</p>
+                <h1>Winged Wet-Nurse</h1>
+              </div>
+              <div class="book-author-overlay">Lady Genevieve</div>
+            </div>
+            <div class="book-pages"></div>
+          </div>
+        </div>
+
+        <!-- Release Countdown -->
+        <div class="countdown-box">
+          <span class="countdown-title">The Feeding Commences In:</span>
+          <div class="timer">
+            <div class="time-segment">
+              <span class="time-number" id="days">00</span>
+              <span class="time-label">Days</span>
+            </div>
+            <div class="time-segment">
+              <span class="time-number" id="hours">00</span>
+              <span class="time-label">Hours</span>
+            </div>
+            <div class="time-segment">
+              <span class="time-number" id="minutes">00</span>
+              <span class="time-label">Mins</span>
+            </div>
+            <div class="time-segment">
+              <span class="time-number" id="seconds">00</span>
+              <span class="time-label">Secs</span>
+            </div>
+          </div>
+          <button class="cta-button" onclick="alert('The celestial order form has been dispatched to your soul! (Mock Pre-Order Successful)')">Secure Your Sacred Copy</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="section-divider"></div>
+
+  <!-- Synopsis Section -->
+  <section id="synopsis">
+    <div class="container">
+      <h2 class="section-title">The Sacred Synopsis</h2>
+      <p class="section-subtitle">Torn between ancient vows and dark desires...</p>
+      
+      <div class="synopsis-card">
+        <div class="synopsis-text">
+          <p>
+            Aurelia Silver-Breast is no ordinary angel. As the last of the Winged Wet-Nurses, her celestial nectar is the only source of pure magic capable of keeping the infant star-gods alive. Bound by the absolute, chaste Vow of the Milky Veil, she must never let a mortal or shadow-being touch her skin. She is the light of the heavens—untouched, untouchable, and utterly alone.
+          </p>
+          <span class="synopsis-highlight">"His feathers were midnight, but his touch was pure white fire."</span>
+          <p>
+            Enter Malakor Void-Wing, the brooding Prince of the Shadow Realm. His obsidian wings are scarred, his heart is locked in ice, and his kingdom is dying of the creeping dust-rot. He needs the holy power of Aurelia's nectar to save his people. When he kidnaps her to his crumbling gothic cathedral, he expects to take her magic by force. What he doesn't expect is a fierce, defiant angel who stirs a raw, unquenchable hunger within his dark soul.
+          </p>
+          <p>
+            As the dark stars align and the Sun Spires crumble, Aurelia's silver wings flare with forbidden heat. She must choose: uphold her sacred duty and let the Shadow Realm perish, or surrender to the obsidian Prince and feed the darkness that threatens to consume them both.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Characters Section -->
+  <section id="characters">
+    <div class="container">
+      <h2 class="section-title">The Winged Cohort</h2>
+      <p class="section-subtitle">Meet the players in this celestial ballet of passion</p>
+      
+      <div class="carousel-container">
+        <!-- Aurelia -->
+        <div class="character-card active">
+          <div class="character-img" style="background-image: url('assets/aurelia.png');"></div>
+          <div class="character-info">
+            <h3 class="character-name">Aurelia Silver-Breast</h3>
+            <span class="character-title">The Winged Wet-Nurse</span>
+            <p class="character-desc">
+              Gentle yet fiercely protective, Aurelia has spent her life in the Sun Spires nursing the cosmic infants. She believes her destiny is pure service, but Malakor's rough, dark touch awakens longings she never knew existed.
+            </p>
+            <p class="character-quote">"My nectar is for the star-gods, Malakor. It does not belong to a monster like you."</p>
+          </div>
+        </div>
+
+        <!-- Malakor -->
+        <div class="character-card">
+          <div class="character-img" style="background-image: url('assets/malakor.png');"></div>
+          <div class="character-info">
+            <h3 class="character-name">Malakor Void-Wing</h3>
+            <span class="character-title">The Brooding Prince of Dust</span>
+            <p class="character-desc">
+              Scarred by wars against the Sky Realm, Malakor rules his dying land with ruthless precision. Armed with dark void magic and massive black wings, he is prepared to destroy the heavens—until he holds the Winged Wet-Nurse in his arms.
+            </p>
+            <p class="character-quote">"Your vows are meaningless in my kingdom, angel. Feed me, or watch your sky burn."</p>
+          </div>
+        </div>
+
+        <!-- Seraphina -->
+        <div class="character-card">
+          <div class="character-img" style="background-image: url('assets/seraphina.png');"></div>
+          <div class="character-info">
+            <h3 class="character-name">Seraphina Gold-Feather</h3>
+            <span class="character-title">The Jealous High Priestess</span>
+            <p class="character-desc">
+              The high-ranking guardian of the Sun Spires. Seraphina has secret ambitions to sit on the Solar Throne. Devious and golden-winged, she suspects Aurelia's hidden desires and plots to have her wings clipped for heresy.
+            </p>
+            <p class="character-quote">"She is tainted, Malakor! Her milk is poisoned with your shadow. She deserves the clipper's blade!"</p>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-btn prev">&lt;</button>
+        <button class="carousel-btn next">&gt;</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Naming Oracle Section -->
+  <section id="oracle">
+    <div class="container">
+      <h2 class="section-title">The Winged Naming Oracle</h2>
+      <p class="section-subtitle">Reveal your celestial wet-nurse name and ultimate fate</p>
+      
+      <div class="oracle-container">
+        <form class="oracle-form" id="oracle-form">
+          <div class="oracle-input-group">
+            <label class="oracle-label" for="userName">Enter Your Mortal Name</label>
+            <input class="oracle-input" type="text" id="userName" required placeholder="e.g. Arabella">
+          </div>
+          
+          <div class="oracle-input-group">
+            <label class="oracle-label" for="birthMonth">Your Birth Month</label>
+            <select class="oracle-select" id="birthMonth" required>
+              <option value="1">January (Frost-Plume)</option>
+              <option value="2">February (Rose-Nectar)</option>
+              <option value="3">March (Star-Veil)</option>
+              <option value="4">April (Sun-Suckler)</option>
+              <option value="5">May (Glitter-Wing)</option>
+              <option value="6">June (Midnight-Breast)</option>
+              <option value="7">July (Solstice-Feeder)</option>
+              <option value="8">August (Gold-Plume)</option>
+              <option value="9">September (Autumn-Mist)</option>
+              <option value="10">October (Shadow-Mother)</option>
+              <option value="11">November (Velvet-Feather)</option>
+              <option value="12">December (Winter-Nipple)</option>
+            </select>
+          </div>
+          
+          <button class="oracle-btn" type="submit">Consult the Oracle</button>
+        </form>
+
+        <div class="oracle-result" id="oracle-result">
+          <h3 class="result-name" id="result-name">✦ Lady Aurelia Silver-Breast ✦</h3>
+          <p class="result-fate" id="result-fate">Your fate is bound to the high fantasy realms of passion...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Praise/Reviews Section -->
+  <section id="reviews">
+    <div class="container">
+      <h2 class="section-title">Praise for the Prophecy</h2>
+      <p class="section-subtitle">What the mortal critics are whispering...</p>
+      
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">"A tour de force of lactation and passion! I wept, I sighed, I lactated tears of joy. Genevieve has done it again!"</p>
+          <span class="review-source">Romantasy Weekly</span>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">"Malakor Void-Wing redefined my standards for brooding dark-winged heroes. I am ready to be nursed. Sensational, heavy breathing throughout."</p>
+          <span class="review-source">The Feathered Chronicle</span>
+        </div>
+        
+        <div class="review-card">
+          <div class="review-rating">★★★★★</div>
+          <p class="review-text">"I read this in one sitting and my heart was fluttering as fast as Aurelia's silver wings. The deluxe edition comes with REAL feather dust!"</p>
+          <span class="review-source">BookTok Royalty</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Merch & Buy Section -->
+  <section id="merch">
+    <div class="container">
+      <h2 class="section-title">Pre-Order the Ritual</h2>
+      <p class="section-subtitle">Select your celestial edition and claim your exclusive rewards</p>
+      
+      <div class="buy-container">
+        <!-- Deluxe Foil -->
+        <div class="buy-card">
+          <span class="buy-badge">Recommended</span>
+          <h3 class="buy-title">Deluxe Foil Edition</h3>
+          <div class="buy-price">$29.99</div>
+          <ul class="buy-features">
+            <li>Embossed gold foil cover art</li>
+            <li>Glitter-sprinkled sprayed edges</li>
+            <li>Comes with real faux angel feathers</li>
+            <li>Scented bookmark (Smells like stardust and cocoa butter)</li>
+            <li>12 full-color character portraits</li>
+          </ul>
+          <button class="buy-btn" onclick="alert('Mock Order Received! The stardust is being harvested.')">Buy Deluxe</button>
+        </div>
+
+        <!-- Ebook -->
+        <div class="buy-card">
+          <span class="buy-badge" style="background: var(--secondary-glow); box-shadow: var(--purple-shadow);">Digital</span>
+          <h3 class="buy-title">Shadow Lord Ebook</h3>
+          <div class="buy-price">$9.99</div>
+          <ul class="buy-features">
+            <li>Instant delivery to your e-reader</li>
+            <li>Animated cover file (flashing stars)</li>
+            <li>3 bonus steamy Malakor-POV chapters</li>
+            <li>Access to the private Discord coven</li>
+          </ul>
+          <button class="buy-btn" onclick="alert('Mock Order Received! The shadow link is preparing.')">Buy Ebook</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- Author Section -->
+  <section id="author">
+    <div class="container">
+      <h2 class="section-title">The Oracle's Voice</h2>
+      <p class="section-subtitle">The woman behind the celestial feathers</p>
+      
+      <div class="author-card">
+        <div class="author-circle"></div>
+        <div class="author-info">
+          <h3 class="author-name">Lady Genevieve de l'Amour-Plume</h3>
+          <span class="author-credentials">USA Today Bestselling Seducer of Souls</span>
+          <p class="author-bio">
+            Lady Genevieve lives in a crumbling castle in Southern France, surrounded by seventeen fluffy Persian cats, and writing romantasy on a typewriter made of ivory and gold leaf. She feeds her cats stardust, collects vintage corsets, and drinks exclusively from a gold-plated chalice. She claims the story of the Winged Wet-Nurse was whispered to her in a dream by a dark-winged stranger.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo">Whispers of the Winged Wet-Nurse</div>
+    <p>Published by Sun & Shadow Press, Ltd.</p>
+    
+    <div class="footer-links">
+      <a href="#hero">The Rapture</a>
+      <a href="#synopsis">The Synopsis</a>
+      <a href="#characters">The Cohort</a>
+      <a href="#oracle">The Oracle</a>
+      <a href="#merch">Pre-Order</a>
+    </div>
+
+    <p>&copy; 2026 Lady Genevieve de l'Amour-Plume. All rights reserved.</p>
+    
+    <p class="footer-disclaimer">
+      Disclaimer: "Whispers of the Winged Wet-Nurse" is a work of fiction. Any resemblance to actual celestial lactation practitioners, shadow lords, or winged wet-nurses is purely coincidental. Side effects of reading this novel may include extreme heart fluttering, wing spasms, spontaneous lactation of tears, and an insatiable desire for dark-winged princes.
+    </p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

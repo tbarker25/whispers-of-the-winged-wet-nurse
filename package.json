@@ -1,0 +1,10 @@
+{
+  "name": "whispers-winged-wet-nurse-site",
+  "version": "1.0.0",
+  "description": "Static website for Whispers of the Winged Wet-Nurse",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve ."
+  },
+  "dependencies": {}
+}
