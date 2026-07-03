@@ -14,11 +14,11 @@ function setupSparkles() {
   const container = document.getElementById('sparkle-container');
   if (!container) return;
 
-  const sparkleSymbols = ['✦', '✧', '★', '❈', '🌸', '✨'];
+  const sparkleSymbols = ['✦', '✧', '★', '✨'];
 
   window.addEventListener('mousemove', (e) => {
-    // Limit sparkle rate slightly to prevent performance issues
-    if (Math.random() > 0.15) return;
+    // Limit sparkle rate slightly to prevent performance issues (making it subtle and elegant)
+    if (Math.random() > 0.07) return;
 
     const sparkle = document.createElement('div');
     sparkle.className = 'sparkle-particle';
@@ -30,23 +30,23 @@ function setupSparkles() {
     
     // Random direction forces for animation
     const angle = Math.random() * Math.PI * 2;
-    const distance = 30 + Math.random() * 50;
+    const distance = 25 + Math.random() * 40;
     const dx = Math.cos(angle) * distance;
     const dy = Math.sin(angle) * distance;
     
     sparkle.style.setProperty('--dx', `${dx}px`);
     sparkle.style.setProperty('--dy', `${dy}px`);
     
-    // Random color tints occasionally
-    const hue = Math.random() > 0.5 ? 330 : 45; // Pink/purple or gold
-    sparkle.style.color = `hsl(${hue}, 100%, 70%)`;
+    // Custom elegant gold/rose colors
+    const isGold = Math.random() > 0.5;
+    sparkle.style.color = isGold ? '#e4cb8d' : '#a36785';
     
     container.appendChild(sparkle);
     
     // Clean up
     setTimeout(() => {
       sparkle.remove();
-    }, 1000);
+    }, 1200);
   });
 }
 
@@ -57,7 +57,7 @@ function setupFeathers() {
   const container = document.getElementById('feather-container');
   if (!container) return;
 
-  const featherCount = 15;
+  const featherCount = 5;
 
   for (let i = 0; i < featherCount; i++) {
     createFeather(container, true);
@@ -65,10 +65,10 @@ function setupFeathers() {
 
   // Keep creating feathers occasionally
   setInterval(() => {
-    if (container.children.length < 25) {
+    if (container.children.length < 10) {
       createFeather(container, false);
     }
-  }, 2000);
+  }, 3500);
 }
 
 function createFeather(container, initialRandomY = false) {
@@ -236,8 +236,8 @@ function setupOracle() {
     resultName.textContent = `✦ Lady/Lord ${prefix} ${middle} ✦`;
     resultFate.textContent = fate;
     
-    // Show results
-    resultDiv.style.display = 'block';
+    // Show results using Tailwind classes
+    resultDiv.classList.remove('hidden');
     resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 }

@@ -1,102 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official website for 'Whispers of the Winged Wet-Nurse', the most anticipated over-the-top romantic fantasy novel of the decade. Pre-order now for exclusive celestial merch!">
+  <meta name="description" content="Official website for 'Whispers of the Winged Wet-Nurse', the premier romantic fantasy novel of the decade. Pre-order now for exclusive celestial editions.">
   <title>Whispers of the Winged Wet-Nurse | Official Romantasy Website</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-brand-dark text-[#f3efff] font-sans antialiased overflow-x-hidden relative">
 
   <!-- Sparkle Particle Trail -->
-  <div id="sparkle-container"></div>
+  <div id="sparkle-container" class="fixed inset-0 pointer-events-none z-[9999]"></div>
 
   <!-- Feather Rain Background -->
-  <div id="feather-container"></div>
+  <div id="feather-container" class="fixed inset-0 pointer-events-none z-[1] overflow-hidden"></div>
 
   <!-- Floating Audio Player Widget -->
-  <div class="audio-player-widget">
-    <button class="player-btn" id="music-toggle-btn">▶️</button>
-    <div class="player-info">
-      <span class="player-title">Hymn of the Veil</span>
-      <span class="player-song" id="player-song-title">Whispers of Nectar</span>
+  <div class="audio-player-widget fixed bottom-6 right-6 bg-brand-deep/90 border border-gold-primary/30 rounded-full px-5 py-2.5 flex items-center gap-4 z-[999] backdrop-blur-md transition-all duration-300 shadow-gold-subtle hover:shadow-gold-strong hover:-translate-y-0.5">
+    <button class="player-btn w-9 h-9 rounded-full bg-gold-refined text-brand-dark flex items-center justify-center cursor-pointer shadow-md text-xs transition-transform active:scale-90" id="music-toggle-btn">▶️</button>
+    <div class="player-info flex flex-col">
+      <span class="player-title font-title text-[9px] text-gold-light tracking-wider uppercase">Hymn of the Veil</span>
+      <span class="player-song text-[11px] font-semibold text-white truncate max-w-[120px]" id="player-song-title">Whispers of Nectar</span>
     </div>
-    <div class="visualizer">
-      <div class="visualizer-bar"></div>
-      <div class="visualizer-bar"></div>
-      <div class="visualizer-bar"></div>
-      <div class="visualizer-bar"></div>
+    <div class="visualizer flex items-end gap-0.5 h-3.5">
+      <div class="visualizer-bar w-[3px] bg-brand-accent rounded-[1px] h-[3px]"></div>
+      <div class="visualizer-bar w-[3px] bg-brand-accent rounded-[1px] h-[3px]"></div>
+      <div class="visualizer-bar w-[3px] bg-brand-accent rounded-[1px] h-[3px]"></div>
+      <div class="visualizer-bar w-[3px] bg-brand-accent rounded-[1px] h-[3px]"></div>
     </div>
   </div>
 
   <!-- Hero Section -->
-  <header class="hero-section" id="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <span class="hero-subtitle">The Prophecy of Nectar and Shadow</span>
-      <h1 class="hero-title">Whispers of the Winged Wet-Nurse</h1>
-      <p class="hero-tagline">She feeds the light. He rules the dark. Together, their forbidden passion will consume the stars.</p>
+  <header class="relative min-height-[100vh] bg-cover bg-center bg-fixed flex flex-col justify-center items-center py-20 px-6 text-center z-10 overflow-hidden" id="hero" style="background-image: linear-gradient(rgba(7, 5, 9, 0.65), #070509), url('assets/hero_bg.png');">
+    <div class="absolute inset-0 bg-[radial-gradient(circle,transparent_20%,#070509_90%)] pointer-events-none"></div>
+    <div class="relative z-20 max-w-6xl w-full flex flex-col items-center">
+      <span class="font-cursive text-4xl md:text-5xl text-gold-light tracking-wide mb-2 animate-pulse">The Prophecy of Nectar and Shadow</span>
+      <h1 class="font-title text-4xl md:text-6xl lg:text-7xl font-extrabold uppercase bg-gold-refined bg-clip-text text-transparent filter drop-shadow-[0_0_15px_rgba(197,160,89,0.3)] mb-4 tracking-widest leading-none">Whispers of the Winged Wet-Nurse</h1>
+      <p class="font-serif italic text-lg md:text-xl text-gold-light/80 max-w-3xl mb-12 drop-shadow-md">She feeds the light. He rules the dark. Together, their forbidden passion will consume the stars.</p>
       
-      <div class="book-display">
+      <div class="flex flex-wrap gap-12 items-center justify-center w-full mt-4">
         <!-- 3D Book Display -->
-        <div class="book-cover-container">
-          <div class="book-cover-3d">
+        <div class="book-cover-container w-[280px] h-[420px] md:w-[320px] md:h-[480px] perspective-[1200px]">
+          <div class="book-cover-3d relative w-full h-full shadow-2xl rounded">
             <div class="book-spine"></div>
-            <div class="book-front">
-              <!-- Custom Title Overlay to cover original text -->
-              <div class="book-title-overlay">
-                <h1>Whispers</h1>
-                <p>of the</p>
-                <h1>Winged Wet-Nurse</h1>
+            <div class="book-front absolute inset-0 bg-cover bg-center rounded-r z-10 flex flex-col justify-between p-8 bg-[url('assets/book_cover.png')]">
+              <div class="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-black/35 pointer-events-none rounded-r"></div>
+              <!-- Custom Title Overlay -->
+              <div class="relative z-20 flex flex-col items-center filter drop-shadow-[0_3px_6px_rgba(0,0,0,0.9)]">
+                <h2 class="font-title text-xl font-bold bg-gold-refined bg-clip-text text-transparent uppercase tracking-wider">Whispers</h2>
+                <p class="font-cursive text-3xl text-brand-accent my-1">of the</p>
+                <h2 class="font-title text-xl font-bold bg-gold-refined bg-clip-text text-transparent uppercase tracking-wider">Winged Wet-Nurse</h2>
               </div>
-              <div class="book-author-overlay">Lady Genevieve</div>
+              <div class="relative z-20 font-title text-xs font-bold text-gold-light uppercase tracking-widest self-center filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-2">Lady Genevieve</div>
             </div>
             <div class="book-pages"></div>
           </div>
         </div>
 
         <!-- Release Countdown -->
-        <div class="countdown-box">
-          <span class="countdown-title">The Feeding Commences In:</span>
-          <div class="timer">
-            <div class="time-segment">
-              <span class="time-number" id="days">00</span>
-              <span class="time-label">Days</span>
+        <div class="bg-brand-deep/80 border border-gold-primary/20 shadow-gold-subtle rounded-2xl p-8 backdrop-blur-md max-w-md w-full flex flex-col items-center">
+          <span class="font-title text-xs text-gold-light uppercase tracking-widest mb-6">The Feeding Commences In:</span>
+          <div class="flex gap-4">
+            <div class="flex flex-col items-center">
+              <span class="font-title text-3xl font-bold text-gold-light drop-shadow-[0_0_10px_rgba(197,160,89,0.3)]" id="days">00</span>
+              <span class="text-[9px] uppercase tracking-wider text-[#c9bcdc] mt-1.5">Days</span>
             </div>
-            <div class="time-segment">
-              <span class="time-number" id="hours">00</span>
-              <span class="time-label">Hours</span>
+            <div class="text-gold-primary/50 text-2xl font-light font-title">:</div>
+            <div class="flex flex-col items-center">
+              <span class="font-title text-3xl font-bold text-gold-light drop-shadow-[0_0_10px_rgba(197,160,89,0.3)]" id="hours">00</span>
+              <span class="text-[9px] uppercase tracking-wider text-[#c9bcdc] mt-1.5">Hours</span>
             </div>
-            <div class="time-segment">
-              <span class="time-number" id="minutes">00</span>
-              <span class="time-label">Mins</span>
+            <div class="text-gold-primary/50 text-2xl font-light font-title">:</div>
+            <div class="flex flex-col items-center">
+              <span class="font-title text-3xl font-bold text-gold-light drop-shadow-[0_0_10px_rgba(197,160,89,0.3)]" id="minutes">00</span>
+              <span class="text-[9px] uppercase tracking-wider text-[#c9bcdc] mt-1.5">Mins</span>
             </div>
-            <div class="time-segment">
-              <span class="time-number" id="seconds">00</span>
-              <span class="time-label">Secs</span>
+            <div class="text-gold-primary/50 text-2xl font-light font-title">:</div>
+            <div class="flex flex-col items-center">
+              <span class="font-title text-3xl font-bold text-gold-light drop-shadow-[0_0_10px_rgba(197,160,89,0.3)]" id="seconds">00</span>
+              <span class="text-[9px] uppercase tracking-wider text-[#c9bcdc] mt-1.5">Secs</span>
             </div>
           </div>
-          <button class="cta-button" onclick="alert('The celestial order form has been dispatched to your soul! (Mock Pre-Order Successful)')">Secure Your Sacred Copy</button>
+          <button class="w-full bg-gold-refined text-brand-dark font-title font-bold text-xs uppercase tracking-widest py-4 px-8 rounded-full shadow-gold-subtle hover:shadow-gold-strong active:scale-98 transition-all duration-200 mt-8" onclick="alert('The celestial order form has been dispatched to your soul! (Mock Pre-Order Successful)')">Secure Your Sacred Copy</button>
         </div>
       </div>
     </div>
   </header>
 
-  <div class="section-divider"></div>
+  <!-- Elegant Section Divider -->
+  <div class="flex justify-center items-center my-6">
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+    <div class="mx-4 text-gold-primary text-xs opacity-75 font-title">✦</div>
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+  </div>
 
   <!-- Synopsis Section -->
-  <section id="synopsis">
-    <div class="container">
-      <h2 class="section-title">The Sacred Synopsis</h2>
-      <p class="section-subtitle">Torn between ancient vows and dark desires...</p>
+  <section id="synopsis" class="py-20 px-6 flex flex-col items-center z-10 relative">
+    <div class="max-w-4xl w-full">
+      <h2 class="font-title text-3xl md:text-4xl text-center bg-gold-refined bg-clip-text text-transparent uppercase tracking-widest mb-2 filter drop-shadow">The Sacred Synopsis</h2>
+      <p class="font-cursive text-2xl text-gold-light/70 text-center mb-12">Torn between ancient vows and dark desires...</p>
       
-      <div class="synopsis-card">
-        <div class="synopsis-text">
-          <p>
+      <div class="bg-gradient-to-br from-brand-deep to-brand-card border border-gold-primary/10 shadow-gold-subtle rounded-2xl p-8 md:p-12 backdrop-blur-md relative overflow-hidden">
+        <div class="font-serif text-lg md:text-xl leading-relaxed text-[#c9bcdc] text-justify space-y-6">
+          <p class="dropcap">
             Aurelia Silver-Breast is no ordinary angel. As the last of the Winged Wet-Nurses, her celestial nectar is the only source of pure magic capable of keeping the infant star-gods alive. Bound by the absolute, chaste Vow of the Milky Veil, she must never let a mortal or shadow-being touch her skin. She is the light of the heavens—untouched, untouchable, and utterly alone.
           </p>
-          <span class="synopsis-highlight">"His feathers were midnight, but his touch was pure white fire."</span>
+          <span class="font-cursive text-3xl md:text-4xl text-gold-light block text-center my-10 leading-snug drop-shadow">"His feathers were midnight, but his touch was pure white fire."</span>
           <p>
             Enter Malakor Void-Wing, the brooding Prince of the Shadow Realm. His obsidian wings are scarred, his heart is locked in ice, and his kingdom is dying of the creeping dust-rot. He needs the holy power of Aurelia's nectar to save his people. When he kidnaps her to his crumbling gothic cathedral, he expects to take her magic by force. What he doesn't expect is a fierce, defiant angel who stirs a raw, unquenchable hunger within his dark soul.
           </p>
@@ -108,79 +117,89 @@
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- Elegant Section Divider -->
+  <div class="flex justify-center items-center my-6">
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+    <div class="mx-4 text-gold-primary text-xs opacity-75 font-title">✦</div>
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+  </div>
 
   <!-- Characters Section -->
-  <section id="characters">
-    <div class="container">
-      <h2 class="section-title">The Winged Cohort</h2>
-      <p class="section-subtitle">Meet the players in this celestial ballet of passion</p>
+  <section id="characters" class="py-20 px-6 flex flex-col items-center z-10 relative">
+    <div class="max-w-5xl w-full">
+      <h2 class="font-title text-3xl md:text-4xl text-center bg-gold-refined bg-clip-text text-transparent uppercase tracking-widest mb-2 filter drop-shadow">The Winged Cohort</h2>
+      <p class="font-cursive text-2xl text-gold-light/70 text-center mb-16">Meet the players in this celestial ballet of passion</p>
       
-      <div class="carousel-container">
+      <div class="carousel-container relative w-full min-h-[620px] md:min-h-[460px] flex items-center justify-center">
         <!-- Aurelia -->
-        <div class="character-card active">
-          <div class="character-img" style="background-image: url('assets/aurelia.png');"></div>
-          <div class="character-info">
-            <h3 class="character-name">Aurelia Silver-Breast</h3>
-            <span class="character-title">The Winged Wet-Nurse</span>
-            <p class="character-desc">
+        <div class="character-card active absolute w-[840px] max-w-[90%] bg-brand-deep/95 border border-gold-primary/20 shadow-gold-subtle rounded-2xl flex flex-col md:flex-row overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-500 ease-out z-[1]">
+          <div class="w-full md:w-[320px] h-[280px] md:h-[420px] bg-cover bg-center flex-shrink-0 border-b md:border-b-0 md:border-r border-gold-primary/20" style="background-image: url('assets/aurelia.png');"></div>
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="font-title text-2xl text-gold-light mb-1">Aurelia Silver-Breast</h3>
+            <span class="font-cursive text-xl text-gold-primary/80 mb-6">The Winged Wet-Nurse</span>
+            <p class="text-sm md:text-base text-[#c9bcdc]/95 leading-relaxed mb-6">
               Gentle yet fiercely protective, Aurelia has spent her life in the Sun Spires nursing the cosmic infants. She believes her destiny is pure service, but Malakor's rough, dark touch awakens longings she never knew existed.
             </p>
-            <p class="character-quote">"My nectar is for the star-gods, Malakor. It does not belong to a monster like you."</p>
+            <p class="font-serif italic text-base md:text-lg text-white border-l-2 border-gold-primary/60 pl-4 py-1 leading-relaxed">"My nectar is for the star-gods, Malakor. It does not belong to a monster like you."</p>
           </div>
         </div>
 
         <!-- Malakor -->
-        <div class="character-card">
-          <div class="character-img" style="background-image: url('assets/malakor.png');"></div>
-          <div class="character-info">
-            <h3 class="character-name">Malakor Void-Wing</h3>
-            <span class="character-title">The Brooding Prince of Dust</span>
-            <p class="character-desc">
+        <div class="character-card absolute w-[840px] max-w-[90%] bg-brand-deep/95 border border-gold-primary/20 shadow-gold-subtle rounded-2xl flex flex-col md:flex-row overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-500 ease-out z-[1]">
+          <div class="w-full md:w-[320px] h-[280px] md:h-[420px] bg-cover bg-center flex-shrink-0 border-b md:border-b-0 md:border-r border-gold-primary/20" style="background-image: url('assets/malakor.png');"></div>
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="font-title text-2xl text-gold-light mb-1">Malakor Void-Wing</h3>
+            <span class="font-cursive text-xl text-gold-primary/80 mb-6">The Brooding Prince of Dust</span>
+            <p class="text-sm md:text-base text-[#c9bcdc]/95 leading-relaxed mb-6">
               Scarred by wars against the Sky Realm, Malakor rules his dying land with ruthless precision. Armed with dark void magic and massive black wings, he is prepared to destroy the heavens—until he holds the Winged Wet-Nurse in his arms.
             </p>
-            <p class="character-quote">"Your vows are meaningless in my kingdom, angel. Feed me, or watch your sky burn."</p>
+            <p class="font-serif italic text-base md:text-lg text-white border-l-2 border-gold-primary/60 pl-4 py-1 leading-relaxed">"Your vows are meaningless in my kingdom, angel. Feed me, or watch your sky burn."</p>
           </div>
         </div>
 
         <!-- Seraphina -->
-        <div class="character-card">
-          <div class="character-img" style="background-image: url('assets/seraphina.png');"></div>
-          <div class="character-info">
-            <h3 class="character-name">Seraphina Gold-Feather</h3>
-            <span class="character-title">The Jealous High Priestess</span>
-            <p class="character-desc">
+        <div class="character-card absolute w-[840px] max-w-[90%] bg-brand-deep/95 border border-gold-primary/20 shadow-gold-subtle rounded-2xl flex flex-col md:flex-row overflow-hidden opacity-0 scale-95 pointer-events-none transition-all duration-500 ease-out z-[1]">
+          <div class="w-full md:w-[320px] h-[280px] md:h-[420px] bg-cover bg-center flex-shrink-0 border-b md:border-b-0 md:border-r border-gold-primary/20" style="background-image: url('assets/seraphina.png');"></div>
+          <div class="p-8 md:p-12 flex flex-col justify-center">
+            <h3 class="font-title text-2xl text-gold-light mb-1">Seraphina Gold-Feather</h3>
+            <span class="font-cursive text-xl text-gold-primary/80 mb-6">The Jealous High Priestess</span>
+            <p class="text-sm md:text-base text-[#c9bcdc]/95 leading-relaxed mb-6">
               The high-ranking guardian of the Sun Spires. Seraphina has secret ambitions to sit on the Solar Throne. Devious and golden-winged, she suspects Aurelia's hidden desires and plots to have her wings clipped for heresy.
             </p>
-            <p class="character-quote">"She is tainted, Malakor! Her milk is poisoned with your shadow. She deserves the clipper's blade!"</p>
+            <p class="font-serif italic text-base md:text-lg text-white border-l-2 border-gold-primary/60 pl-4 py-1 leading-relaxed">"She is tainted, Malakor! Her milk is poisoned with your shadow. She deserves the clipper's blade!"</p>
           </div>
         </div>
 
         <!-- Controls -->
-        <button class="carousel-btn prev">&lt;</button>
-        <button class="carousel-btn next">&gt;</button>
+        <button class="carousel-btn prev absolute left-2 md:left-6 top-[50%] translate-y-[-50%] w-11 h-11 bg-gold-refined rounded-full flex items-center justify-center text-brand-dark font-bold text-sm cursor-pointer shadow-md hover:scale-105 active:scale-95 transition-all z-20">&lt;</button>
+        <button class="carousel-btn next absolute right-2 md:right-6 top-[50%] translate-y-[-50%] w-11 h-11 bg-gold-refined rounded-full flex items-center justify-center text-brand-dark font-bold text-sm cursor-pointer shadow-md hover:scale-105 active:scale-95 transition-all z-20">&gt;</button>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- Elegant Section Divider -->
+  <div class="flex justify-center items-center my-6">
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+    <div class="mx-4 text-gold-primary text-xs opacity-75 font-title">✦</div>
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+  </div>
 
   <!-- Naming Oracle Section -->
-  <section id="oracle">
-    <div class="container">
-      <h2 class="section-title">The Winged Naming Oracle</h2>
-      <p class="section-subtitle">Reveal your celestial wet-nurse name and ultimate fate</p>
+  <section id="oracle" class="py-20 px-6 flex flex-col items-center z-10 relative">
+    <div class="max-w-2xl w-full">
+      <h2 class="font-title text-3xl md:text-4xl text-center bg-gold-refined bg-clip-text text-transparent uppercase tracking-widest mb-2 filter drop-shadow">The Winged Naming Oracle</h2>
+      <p class="font-cursive text-2xl text-gold-light/70 text-center mb-12">Reveal your celestial wet-nurse name and ultimate fate</p>
       
-      <div class="oracle-container">
-        <form class="oracle-form" id="oracle-form">
-          <div class="oracle-input-group">
-            <label class="oracle-label" for="userName">Enter Your Mortal Name</label>
-            <input class="oracle-input" type="text" id="userName" required placeholder="e.g. Arabella">
+      <div class="bg-gradient-to-br from-brand-deep to-brand-card border border-gold-primary/20 shadow-gold-subtle rounded-2xl p-8 md:p-12 backdrop-blur-md text-center">
+        <form class="flex flex-col gap-6 mt-4" id="oracle-form">
+          <div class="flex flex-col items-start gap-2 w-full">
+            <label class="font-title text-[10px] text-gold-light uppercase tracking-widest" for="userName">Enter Your Mortal Name</label>
+            <input class="w-full px-5 py-3.5 bg-brand-dark/80 border border-gold-primary/30 rounded-lg text-white font-sans text-sm focus:border-gold-light focus:ring-1 focus:ring-gold-light/30 outline-none transition-all" type="text" id="userName" required placeholder="e.g. Arabella">
           </div>
           
-          <div class="oracle-input-group">
-            <label class="oracle-label" for="birthMonth">Your Birth Month</label>
-            <select class="oracle-select" id="birthMonth" required>
+          <div class="flex flex-col items-start gap-2 w-full">
+            <label class="font-title text-[10px] text-gold-light uppercase tracking-widest" for="birthMonth">Your Birth Month</label>
+            <select class="w-full px-5 py-3.5 bg-brand-dark/80 border border-gold-primary/30 rounded-lg text-white font-sans text-sm focus:border-gold-light focus:ring-1 focus:ring-gold-light/30 outline-none transition-all appearance-none bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22%23c5a059%22><path d=%22M7 10l5 5 5-5z%22/></svg>')] bg-no-repeat bg-[right_15px_center]" id="birthMonth" required>
               <option value="1">January (Frost-Plume)</option>
               <option value="2">February (Rose-Nectar)</option>
               <option value="3">March (Star-Veil)</option>
@@ -196,103 +215,118 @@
             </select>
           </div>
           
-          <button class="oracle-btn" type="submit">Consult the Oracle</button>
+          <button class="bg-gold-refined text-brand-dark font-title font-bold text-xs uppercase tracking-widest py-4 px-8 rounded-lg shadow-gold-subtle hover:shadow-gold-strong active:scale-98 transition-all duration-200 mt-4 cursor-pointer" type="submit">Consult the Oracle</button>
         </form>
 
-        <div class="oracle-result" id="oracle-result">
-          <h3 class="result-name" id="result-name">✦ Lady Aurelia Silver-Breast ✦</h3>
-          <p class="result-fate" id="result-fate">Your fate is bound to the high fantasy realms of passion...</p>
+        <div class="mt-10 pt-8 border-t border-dashed border-gold-primary/20 hidden" id="oracle-result">
+          <h3 class="font-title text-xl md:text-2xl bg-gold-refined bg-clip-text text-transparent filter drop-shadow mb-4" id="result-name">✦ Lady Aurelia Silver-Breast ✦</h3>
+          <p class="font-serif italic text-base md:text-lg text-[#c9bcdc] leading-relaxed" id="result-fate">Your fate is bound to the high fantasy realms of passion...</p>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- Elegant Section Divider -->
+  <div class="flex justify-center items-center my-6">
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+    <div class="mx-4 text-gold-primary text-xs opacity-75 font-title">✦</div>
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+  </div>
 
   <!-- Praise/Reviews Section -->
-  <section id="reviews">
-    <div class="container">
-      <h2 class="section-title">Praise for the Prophecy</h2>
-      <p class="section-subtitle">What the mortal critics are whispering...</p>
+  <section id="reviews" class="py-20 px-6 flex flex-col items-center z-10 relative">
+    <div class="max-w-5xl w-full">
+      <h2 class="font-title text-3xl md:text-4xl text-center bg-gold-refined bg-clip-text text-transparent uppercase tracking-widest mb-2 filter drop-shadow">Praise for the Prophecy</h2>
+      <p class="font-cursive text-2xl text-gold-light/70 text-center mb-12">What the mortal critics are whispering...</p>
       
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-rating">★★★★★</div>
-          <p class="review-text">"A tour de force of lactation and passion! I wept, I sighed, I lactated tears of joy. Genevieve has done it again!"</p>
-          <span class="review-source">Romantasy Weekly</span>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4">
+        <div class="bg-brand-deep/85 border border-gold-primary/10 rounded-xl p-8 transition-all duration-300 hover:border-gold-primary/40 hover:-translate-y-1 hover:shadow-gold-subtle relative before:content-['“'] before:absolute before:top-4 before:left-5 before:text-7xl before:font-serif before:text-brand-accent/10 before:leading-none">
+          <div class="text-gold-light text-sm mb-4 filter drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]">★★★★★</div>
+          <p class="font-serif italic text-[15px] text-[#c9bcdc] leading-relaxed mb-4 relative z-10">"A sophisticated narrative of cosmic duty and forbidden pull. I wept, I sighed, I was swept away by the depth of Aurelia and Malakor's connection."</p>
+          <span class="font-sans font-semibold text-[10px] text-gold-primary uppercase tracking-wider block">Romantasy Weekly</span>
         </div>
         
-        <div class="review-card">
-          <div class="review-rating">★★★★★</div>
-          <p class="review-text">"Malakor Void-Wing redefined my standards for brooding dark-winged heroes. I am ready to be nursed. Sensational, heavy breathing throughout."</p>
-          <span class="review-source">The Feathered Chronicle</span>
+        <div class="bg-brand-deep/85 border border-gold-primary/10 rounded-xl p-8 transition-all duration-300 hover:border-gold-primary/40 hover:-translate-y-1 hover:shadow-gold-subtle relative before:content-['“'] before:absolute before:top-4 before:left-5 before:text-7xl before:font-serif before:text-brand-accent/10 before:leading-none">
+          <div class="text-gold-light text-sm mb-4 filter drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]">★★★★★</div>
+          <p class="font-serif italic text-[15px] text-[#c9bcdc] leading-relaxed mb-4 relative z-10">"Malakor Void-Wing sets a new gold standard for brooding, complex dark heroes. Sensational and beautifully paced. The romantic tension is palpable."</p>
+          <span class="font-sans font-semibold text-[10px] text-gold-primary uppercase tracking-wider block">The Feathered Chronicle</span>
         </div>
         
-        <div class="review-card">
-          <div class="review-rating">★★★★★</div>
-          <p class="review-text">"I read this in one sitting and my heart was fluttering as fast as Aurelia's silver wings. The deluxe edition comes with REAL feather dust!"</p>
-          <span class="review-source">BookTok Royalty</span>
+        <div class="bg-brand-deep/85 border border-gold-primary/10 rounded-xl p-8 transition-all duration-300 hover:border-gold-primary/40 hover:-translate-y-1 hover:shadow-gold-subtle relative before:content-['“'] before:absolute before:top-4 before:left-5 before:text-7xl before:font-serif before:text-brand-accent/10 before:leading-none">
+          <div class="text-gold-light text-sm mb-4 filter drop-shadow-[0_0_4px_rgba(197,160,89,0.3)]">★★★★★</div>
+          <p class="font-serif italic text-[15px] text-[#c9bcdc] leading-relaxed mb-4 relative z-10">"I read this in one sitting. My heart fluttered as fast as Aurelia's light-flared wings. It is elegant, steamy, and entirely unforgettable."</p>
+          <span class="font-sans font-semibold text-[10px] text-gold-primary uppercase tracking-wider block">BookTok Royalty</span>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- Elegant Section Divider -->
+  <div class="flex justify-center items-center my-6">
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+    <div class="mx-4 text-gold-primary text-xs opacity-75 font-title">✦</div>
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+  </div>
 
   <!-- Merch & Buy Section -->
-  <section id="merch">
-    <div class="container">
-      <h2 class="section-title">Pre-Order the Ritual</h2>
-      <p class="section-subtitle">Select your celestial edition and claim your exclusive rewards</p>
+  <section id="merch" class="py-20 px-6 flex flex-col items-center z-10 relative">
+    <div class="max-w-4xl w-full">
+      <h2 class="font-title text-3xl md:text-4xl text-center bg-gold-refined bg-clip-text text-transparent uppercase tracking-widest mb-2 filter drop-shadow">Pre-Order the Ritual</h2>
+      <p class="font-cursive text-2xl text-gold-light/70 text-center mb-12">Select your celestial edition and claim your exclusive rewards</p>
       
-      <div class="buy-container">
+      <div class="flex flex-wrap gap-8 justify-center mt-4">
         <!-- Deluxe Foil -->
-        <div class="buy-card">
-          <span class="buy-badge">Recommended</span>
-          <h3 class="buy-title">Deluxe Foil Edition</h3>
-          <div class="buy-price">$29.99</div>
-          <ul class="buy-features">
-            <li>Embossed gold foil cover art</li>
-            <li>Glitter-sprinkled sprayed edges</li>
-            <li>Comes with real faux angel feathers</li>
-            <li>Scented bookmark (Smells like stardust and cocoa butter)</li>
-            <li>12 full-color character portraits</li>
+        <div class="bg-gradient-to-br from-brand-deep to-brand-card border-2 border-gold-primary/50 shadow-gold-strong rounded-2xl p-8 text-center flex-1 min-w-[280px] max-w-[380px] transition-all duration-300 hover:-translate-y-2 relative">
+          <span class="bg-gold-refined text-brand-dark font-title text-[9px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-5 shadow shadow-gold-subtle">Recommended</span>
+          <h3 class="font-title text-xl text-white mb-2">Deluxe Foil Edition</h3>
+          <div class="text-3xl font-bold text-gold-light font-title mb-6">$29.99</div>
+          <ul class="text-left text-xs text-[#c9bcdc] space-y-4 mb-8">
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">Embossed gold foil cover art</li>
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">Glitter-sprinkled sprayed edges</li>
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">Comes with real faux angel feathers</li>
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">Scented bookmark (Stardust & cocoa butter)</li>
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">12 full-color character portraits</li>
           </ul>
-          <button class="buy-btn" onclick="alert('Mock Order Received! The stardust is being harvested.')">Buy Deluxe</button>
+          <button class="w-full bg-transparent hover:bg-gold-refined border border-gold-primary/50 text-gold-primary hover:text-brand-dark font-title font-bold text-xs uppercase tracking-widest py-3 px-6 rounded-full transition-all duration-300" onclick="alert('Mock Order Received! The stardust is being harvested.')">Buy Deluxe</button>
         </div>
 
         <!-- Ebook -->
-        <div class="buy-card">
-          <span class="buy-badge" style="background: var(--secondary-glow); box-shadow: var(--purple-shadow);">Digital</span>
-          <h3 class="buy-title">Shadow Lord Ebook</h3>
-          <div class="buy-price">$9.99</div>
-          <ul class="buy-features">
-            <li>Instant delivery to your e-reader</li>
-            <li>Animated cover file (flashing stars)</li>
-            <li>3 bonus steamy Malakor-POV chapters</li>
-            <li>Access to the private Discord coven</li>
+        <div class="bg-gradient-to-br from-brand-deep to-brand-card border border-gold-primary/20 shadow-gold-subtle rounded-2xl p-8 text-center flex-1 min-w-[280px] max-w-[380px] transition-all duration-300 hover:-translate-y-2 relative">
+          <span class="bg-brand-accent text-white font-title text-[9px] font-bold px-4 py-1.5 rounded-full uppercase tracking-wider inline-block mb-5 shadow">Digital</span>
+          <h3 class="font-title text-xl text-white mb-2">Shadow Lord Ebook</h3>
+          <div class="text-3xl font-bold text-gold-light font-title mb-6">$9.99</div>
+          <ul class="text-left text-xs text-[#c9bcdc] space-y-4 mb-8">
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">Instant delivery to your e-reader</li>
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">Animated cover file (flashing stars)</li>
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">3 bonus steamy Malakor-POV chapters</li>
+            <li class="relative pl-6 before:content-['✦'] before:absolute before:left-0 before:text-gold-primary">Access to the private Discord coven</li>
           </ul>
-          <button class="buy-btn" onclick="alert('Mock Order Received! The shadow link is preparing.')">Buy Ebook</button>
+          <button class="w-full bg-transparent hover:bg-gold-refined border border-gold-primary/50 text-gold-primary hover:text-brand-dark font-title font-bold text-xs uppercase tracking-widest py-3 px-6 rounded-full transition-all duration-300" onclick="alert('Mock Order Received! The shadow link is preparing.')">Buy Ebook</button>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider"></div>
+  <!-- Elegant Section Divider -->
+  <div class="flex justify-center items-center my-6">
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+    <div class="mx-4 text-gold-primary text-xs opacity-75 font-title">✦</div>
+    <div class="h-[1px] bg-gradient-to-r from-transparent via-gold-primary/30 to-transparent w-full max-w-4xl"></div>
+  </div>
 
   <!-- Author Section -->
-  <section id="author">
-    <div class="container">
-      <h2 class="section-title">The Oracle's Voice</h2>
-      <p class="section-subtitle">The woman behind the celestial feathers</p>
+  <section id="author" class="py-20 px-6 flex flex-col items-center z-10 relative">
+    <div class="max-w-4xl w-full">
+      <h2 class="font-title text-3xl md:text-4xl text-center bg-gold-refined bg-clip-text text-transparent uppercase tracking-widest mb-2 filter drop-shadow">The Oracle's Voice</h2>
+      <p class="font-cursive text-2xl text-gold-light/70 text-center mb-12">The author behind the celestial feathers</p>
       
-      <div class="author-card">
-        <div class="author-circle"></div>
-        <div class="author-info">
-          <h3 class="author-name">Lady Genevieve de l'Amour-Plume</h3>
-          <span class="author-credentials">USA Today Bestselling Seducer of Souls</span>
-          <p class="author-bio">
-            Lady Genevieve lives in a crumbling castle in Southern France, surrounded by seventeen fluffy Persian cats, and writing romantasy on a typewriter made of ivory and gold leaf. She feeds her cats stardust, collects vintage corsets, and drinks exclusively from a gold-plated chalice. She claims the story of the Winged Wet-Nurse was whispered to her in a dream by a dark-winged stranger.
+      <div class="bg-brand-deep/80 border border-brand-accent/20 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-10 backdrop-blur-md">
+        <div class="w-[200px] h-[200px] rounded-full border-2 border-gold-primary/50 shadow-gold-subtle bg-brand-deep bg-[url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22 fill=%22%23c5a059%22><circle cx=%2250%22 cy=%2235%22 r=%2215%22/><path d=%22M50 55c-15 0-25 10-25 20v5h50v-5c0-10-10-20-25-20z%22/></svg>')] bg-[length:60%] bg-no-repeat bg-center flex-shrink-0 relative after:content-['✍️'] after:absolute after:bottom-1 after:right-3 after:text-3xl"></div>
+        <div class="flex flex-col text-center md:text-left">
+          <h3 class="font-title text-xl text-gold-light mb-1">Lady Genevieve de l'Amour-Plume</h3>
+          <span class="font-cursive text-xl text-brand-accent/90 mb-4">USA Today Bestselling Seducer of Souls</span>
+          <p class="font-serif text-sm md:text-base text-[#c9bcdc] leading-relaxed">
+            Lady Genevieve lives in a crumbling castle in Southern France, surrounded by seventeen fluffy Persian cats, and writing romantasy on a typewriter made of ivory and gold leaf. She collects vintage corsets, drinks exclusively from a gold-plated chalice, and crafts magical narratives that bridge the light of the skies with the shadow of the earth.
           </p>
         </div>
       </div>
@@ -300,22 +334,22 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="footer-logo">Whispers of the Winged Wet-Nurse</div>
-    <p>Published by Sun & Shadow Press, Ltd.</p>
+  <footer class="bg-[#050209] border-t border-gold-primary/10 py-12 px-6 text-center text-[11px] text-[#c9bcdc]/50 z-10 relative">
+    <div class="font-title text-sm bg-gold-refined bg-clip-text text-transparent uppercase tracking-wider mb-4">Whispers of the Winged Wet-Nurse</div>
+    <p class="mb-4">Published by Sun & Shadow Press, Ltd.</p>
     
-    <div class="footer-links">
-      <a href="#hero">The Rapture</a>
-      <a href="#synopsis">The Synopsis</a>
-      <a href="#characters">The Cohort</a>
-      <a href="#oracle">The Oracle</a>
-      <a href="#merch">Pre-Order</a>
+    <div class="flex justify-center gap-6 mb-6 font-medium">
+      <a href="#hero" class="text-[#c9bcdc]/70 hover:text-gold-light transition-colors">The Rapture</a>
+      <a href="#synopsis" class="text-[#c9bcdc]/70 hover:text-gold-light transition-colors">The Synopsis</a>
+      <a href="#characters" class="text-[#c9bcdc]/70 hover:text-gold-light transition-colors">The Cohort</a>
+      <a href="#oracle" class="text-[#c9bcdc]/70 hover:text-gold-light transition-colors">The Oracle</a>
+      <a href="#merch" class="text-[#c9bcdc]/70 hover:text-gold-light transition-colors">Pre-Order</a>
     </div>
 
-    <p>&copy; 2026 Lady Genevieve de l'Amour-Plume. All rights reserved.</p>
+    <p class="mb-6">&copy; 2026 Lady Genevieve de l'Amour-Plume. All rights reserved.</p>
     
-    <p class="footer-disclaimer">
-      Disclaimer: "Whispers of the Winged Wet-Nurse" is a work of fiction. Any resemblance to actual celestial lactation practitioners, shadow lords, or winged wet-nurses is purely coincidental. Side effects of reading this novel may include extreme heart fluttering, wing spasms, spontaneous lactation of tears, and an insatiable desire for dark-winged princes.
+    <p class="max-w-2xl mx-auto text-[10px] leading-relaxed text-[#c9bcdc]/30 border-t border-gold-primary/5 pt-6">
+      Disclaimer: "Whispers of the Winged Wet-Nurse" is a work of fiction. Any resemblance to actual celestial lactation practitioners, shadow lords, or winged wet-nurses is purely coincidental. Side effects of reading this novel may include mild heart fluttering, daydreams of obsidian wings, and an insatiable desire for romantic fantasy.
     </p>
   </footer>
 
